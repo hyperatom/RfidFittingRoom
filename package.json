@@ -33,5 +33,9 @@
     "url": "git://github.com/b8959834/RfidFittingRoom.git"
   },
   "author": "b8959834",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "sinon": "^1.14.1"
+  }
 }
