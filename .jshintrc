@@ -62,6 +62,7 @@
 
   "globals"       : {
     "module": true,
+    "sails": true,
     "describe": true,
     "it": true,
     "before": true,
