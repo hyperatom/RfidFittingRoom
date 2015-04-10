@@ -1,14 +1,29 @@
+var ProductResolver = require('./ProductResolver'),
+  NodePromise = require('Promise');
+
 module.exports = {
 
-  rfidCode: null,
+  product: {},
 
   show: function() {
+    var self = this;
 
-    return this.rfidCode;
+    return new NodePromise(function(resolve) {
+      resolve(self.product);
+    });
   },
 
   store: function(rfid) {
-    this.rfidCode = rfid;
-  }
 
+    var self = this;
+
+    function setProduct(product) {
+      self.product = product;
+      return product;
+    }
+
+    return ProductResolver
+      .rfidToProduct(rfid)
+      .then(setProduct);
+  }
 };
