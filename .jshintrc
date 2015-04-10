@@ -67,6 +67,9 @@
     "it": true,
     "before": true,
     "after": true,
-    "require": true
+    "require": true,
+    "define": true,
+    "beforeEach": true,
+    "async": true
   }
 }
