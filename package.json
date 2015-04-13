@@ -1,8 +1,8 @@
 {
   "name": "RfidFittingRoom",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
-  "description": "a Sails application",
+  "description": "Graduate project to prototype RFID technology within fitting rooms.",
   "keywords": [],
   "dependencies": {
     "sails": "~0.11.0",
@@ -31,9 +31,9 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/b8959834/RfidFittingRoom.git"
+    "url": "git://github.com/hyperatom/RfidFittingRoom.git"
   },
-  "author": "b8959834",
+  "author": "Adam Barrell",
   "license": "",
   "devDependencies": {
     "chai": "^2.2.0",
