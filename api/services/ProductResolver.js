@@ -1,4 +1,5 @@
-var ImageEncoder = require('./ImageEncoder');
+var ImageEncoder = require('./ImageEncoder'),
+  Q = require('q');
 
 module.exports = {
 
@@ -16,8 +17,29 @@ module.exports = {
         .then(attachProductImage);
     }
 
+    function embedProductTreeImages(product) {
+
+      function embed() {
+        return embedImage(product);
+      }
+
+      if (product.relatedProducts.length) {
+        var productQueue = [];
+
+        for (var i=0; i < product.relatedProducts.length; i++) {
+          productQueue.push(embedProductTreeImages(product.relatedProducts[i]));
+        }
+
+        return Q.all(productQueue)
+          .then(embed);
+      }
+
+      return embedImage(product);
+    }
+
     return Product
       .findOne(rfid)
-      .then(embedImage);
+      .populate('relatedProducts')
+      .then(embedProductTreeImages);
   }
 };
