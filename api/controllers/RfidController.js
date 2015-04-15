@@ -11,7 +11,6 @@ module.exports = {
     return RfidRepo
       .show()
       .then(function(product) {
-
         return res.json(product);
       });
   },

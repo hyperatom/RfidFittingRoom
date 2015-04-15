@@ -1,16 +1,17 @@
 var ProductResolver = require('./ProductResolver'),
-  NodePromise = require('Promise');
+  Q = require('q');
 
 module.exports = {
 
   product: {},
 
   show: function() {
-    var self = this;
+    var self = this,
+      deferred = Q.defer();
 
-    return new NodePromise(function(resolve) {
-      resolve(self.product);
-    });
+    deferred.resolve(self.product);
+
+    return deferred.promise;
   },
 
   store: function(rfid) {
