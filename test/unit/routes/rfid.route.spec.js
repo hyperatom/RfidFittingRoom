@@ -15,7 +15,7 @@ describe('RFID Route Availability', function() {
 
       req(sails.hooks.http.app)
         .post('/rfid')
-        .send({ id: 11111 })
+        .send({ id: '0268098208' })
         .expect(200, done);
     });
 
@@ -25,7 +25,7 @@ describe('RFID Route Availability', function() {
 
       req(sails.hooks.http.app)
         .post('/rfid')
-        .send({ id: 11111 })
+        .send({ id: '0268098208' })
         .expect(200)
         .then(function() {
           expect(spy.called).to.equal(true);
@@ -78,7 +78,7 @@ describe('RFID-Product mappings', function() {
 
   this.timeout(5000);
 
-  it('should return the correct product for RFID code 11111', function(done) {
+  it('should return the correct product for RFID code 0268098208', function(done) {
 
     function getActiveProduct(done) {
 
@@ -93,14 +93,14 @@ describe('RFID-Product mappings', function() {
 
     req(sails.hooks.http.app)
       .post('/rfid')
-      .send({id: 11111})
+      .send({ id: '0268098208' })
       .expect(200)
       .end(function() {
         getActiveProduct(done);
       });
   });
 
-  it('should return the correct product for RFID code 22222', function(done) {
+  it('should return the correct product for RFID code 1231094920', function(done) {
 
     function getActiveProduct(done) {
 
@@ -115,7 +115,7 @@ describe('RFID-Product mappings', function() {
 
     req(sails.hooks.http.app)
       .post('/rfid')
-      .send({id: 22222})
+      .send({ id: '1231094920' })
       .expect(200)
       .end(function() {
         getActiveProduct(done);
