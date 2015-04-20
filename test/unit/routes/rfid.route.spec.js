@@ -50,6 +50,8 @@ describe('RFID Route Availability', function() {
           expect(res.body).to.have.property('price');
           expect(res.body).to.have.property('image');
           expect(res.body).to.have.property('relatedProducts');
+          expect(res.body).to.have.property('rating');
+          expect(res.body).to.have.property('inStore');
           done();
         });
     });
@@ -67,6 +69,8 @@ describe('RFID Route Availability', function() {
           expect(res.body).to.have.property('price');
           expect(res.body).to.have.property('image');
           expect(res.body).to.have.property('relatedProducts');
+          expect(res.body).to.have.property('rating');
+          expect(res.body).to.have.property('inStore');
           done();
         });
     });

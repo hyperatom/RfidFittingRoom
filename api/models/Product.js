@@ -16,19 +16,23 @@ module.exports = {
     },
 
     name: {
-      type: 'string'
+      type: 'string',
+      required: true
     },
 
     description: {
-      type: 'string'
+      type: 'string',
+      required: true
     },
 
     price: {
-      type: 'float'
+      type: 'float',
+      required: true
     },
 
     imageUrl: {
-      type: 'string'
+      type: 'string',
+      required: true
     },
 
     relatedTo: {
@@ -38,6 +42,17 @@ module.exports = {
     relatedProducts: {
       collection: 'Product',
       via: 'relatedTo'
+    },
+
+    rating: {
+      type: 'integer',
+      min: 0,
+      max: 5,
+      required: true
+    },
+
+    inStore: {
+      type: 'boolean'
     }
   },
 
@@ -48,7 +63,9 @@ module.exports = {
       description: 'Dressing down for the beach doesn\'t mean a compromise in style; ' +
       'this beach dress is a cute option.',
       price: 16.00,
-      imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/SD_01_T52_2809_F0_X_EC_0?$PDP_MAXI_ZOOM$'
+      imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/SD_01_T52_2809_F0_X_EC_0?$PDP_MAXI_ZOOM$',
+      rating: 5,
+      inStore: true
     },
     {
       id: '1231094920',
@@ -56,7 +73,9 @@ module.exports = {
       description: 'For a gorgeously ladylike look, this tea dress is just the thing. ' +
       'Floral prints are an easy way to channel a current catwalk trend.',
       price: 39.50,
-      imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/SD_01_T42_2410D_F4_X_EC_0?$PDP_MAXI_ZOOM$'
+      imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/SD_01_T42_2410D_F4_X_EC_0?$PDP_MAXI_ZOOM$',
+      rating: 5,
+      inStore: true
     },
     {
       id: '33333',
@@ -64,7 +83,9 @@ module.exports = {
       description: 'Keep the sun out of your eyes with this chic visor.',
       price: 12.50,
       imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/HT_01_T01_7201_V4_X_EC_90?$PDP_MAXI_ZOOM$',
-      relatedTo: '0268098208'
+      relatedTo: '0268098208',
+      rating: 4,
+      inStore: false
     },
     {
       id: '44444',
@@ -72,7 +93,9 @@ module.exports = {
       description: 'Add some pizzazz to your outfit with this statement necklace.',
       price: 18.00,
       imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/RC_01_T06_6902L_AN_X_EC_1?$PDP_MAXI_ZOOM$',
-      relatedTo: '0268098208'
+      relatedTo: '0268098208',
+      rating: 5,
+      inStore: true
     },
     {
       id: '55555',
@@ -81,7 +104,9 @@ module.exports = {
       ' comfortable by insuring your foot is correctly...',
       price: 19.50,
       imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/SD_01_T52_2809_F0_X_EC_0?$PDP_MAXI_ZOOM$',
-      relatedTo: '0268098208'
+      relatedTo: '0268098208',
+      rating: 4,
+      inStore: true
     },
     {
       id: '66666',
@@ -90,7 +115,9 @@ module.exports = {
       'your accessories to a minimum for an effortlessly...',
       price: 15.00,
       imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/RC_01_T01_3612S_E0_X_EC_0?$PDP_MAXI_ZOOM$',
-      relatedTo: '1231094920'
+      relatedTo: '1231094920',
+      rating: 3,
+      inStore: true
     },
     {
       id: '77777',
@@ -98,7 +125,9 @@ module.exports = {
       description: 'A stylish way to keep the sun off your face, this elegant sun hat is a summer must-have.',
       price: 18.00,
       imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/HT_01_T01_4603L_V4_X_EC_90?$PDP_MAXI_ZOOM$',
-      relatedTo: '1231094920'
+      relatedTo: '1231094920',
+      rating: 4,
+      inStore: true
     },
     {
       id: '88888',
@@ -107,7 +136,9 @@ module.exports = {
       ' aloe and antioxidant Vitamin E to help maintain...',
       price: 15.00,
       imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/RC_01_T01_3612S_E0_X_EC_0?$PDP_MAXI_ZOOM$',
-      relatedTo: '1231094920'
+      relatedTo: '1231094920',
+      rating: 3,
+      inStore: false
     }
   ]
 };
