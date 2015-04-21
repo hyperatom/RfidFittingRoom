@@ -85,7 +85,7 @@ module.exports = {
       imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/HT_01_T01_7201_V4_X_EC_90?$PDP_PROD_IMAGE$',
       relatedTo: '0268098208',
       rating: 4,
-      inStore: false
+      inStore: true
     },
     {
       id: '44444',
@@ -99,7 +99,7 @@ module.exports = {
     },
     {
       id: '55555',
-      name: 'Peep Toe Slingback Court Shoes with Insolia Flex®',
+      name: 'Peep Toe Slingback Court Shoes',
       description: 'Endorsed by the UK College of Podiatrists, Insolia Flex® makes walking in flats more' +
       ' comfortable by insuring your foot is correctly...',
       price: 19.50,
@@ -138,7 +138,7 @@ module.exports = {
       imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/RC_07_T22_4376_NC_X_EC_0?$PDP_PROD_IMAGE$',
       relatedTo: '1231094920',
       rating: 3,
-      inStore: false
+      inStore: true
     }
   ]
 };

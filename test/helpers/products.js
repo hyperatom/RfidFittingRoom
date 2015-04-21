@@ -21,7 +21,7 @@ module.exports = {
     },
     {
       id: '55555',
-      name: 'Peep Toe Slingback Court Shoes with Insolia Flex®',
+      name: 'Peep Toe Slingback Court Shoes',
       description: 'Endorsed by the UK College of Podiatrists, Insolia Flex® makes walking in flats more' +
       ' comfortable by insuring your foot is correctly...',
       price: 19.50,
@@ -79,7 +79,7 @@ module.exports = {
   },
   product_5: {
     id: '55555',
-    name: 'Peep Toe Slingback Court Shoes with Insolia Flex®',
+    name: 'Peep Toe Slingback Court Shoes',
     description: 'Endorsed by the UK College of Podiatrists, Insolia Flex® makes walking in flats more' +
     ' comfortable by insuring your foot is correctly...',
     price: 19.50,
