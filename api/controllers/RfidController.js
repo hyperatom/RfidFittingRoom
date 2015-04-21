@@ -39,9 +39,9 @@ module.exports = {
 
   reset: function(req, res) {
 
-    var extractResponse = function(data) {
-      Product.publishUpdate(0, data);
-      return res.json(data);
+    var extractResponse = function(productId) {
+      Product.publishDestroy(productId);
+      return res.json({});
     };
 
    return RfidRepo

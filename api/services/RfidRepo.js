@@ -30,9 +30,9 @@ module.exports = {
 
   reset: function() {
     var deffered = Q.defer();
-    this.product = {};
+    deffered.resolve(this.product.id);
 
-    deffered.resolve(this.product);
+    this.product = {};
 
     return deffered.promise;
   }
