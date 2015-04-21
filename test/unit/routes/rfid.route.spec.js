@@ -74,7 +74,33 @@ describe('RFID Route Availability', function() {
           done();
         });
     });
+  });
 
+  describe('DELETE /rfid', function() {
+
+    it('should reset the related products', function(done) {
+
+      req(sails.hooks.http.app)
+        .delete('/rfid')
+        .expect('Content-Type', /json/)
+        .expect(200)
+        .end(function(err, res) {
+          expect(res.body).to.eql({});
+          done();
+        });
+    });
+
+    it('should maintain reset product value', function(done) {
+
+      req(sails.hooks.http.app)
+        .get('/rfid')
+        .expect('Content-Type', /json/)
+        .expect(200)
+        .end(function(err, res) {
+          expect(res.body).to.eql({});
+          done();
+        });
+    });
   });
 });
 

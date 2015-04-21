@@ -35,6 +35,18 @@ module.exports = {
     return RfidRepo
       .store(rfid)
       .then(extractResponse);
+  },
+
+  reset: function(req, res) {
+
+    var extractResponse = function(data) {
+      Product.publishUpdate(0, data);
+      return res.json(data);
+    };
+
+   return RfidRepo
+      .reset()
+      .then(extractResponse);
   }
 };
 

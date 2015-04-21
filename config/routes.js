@@ -47,5 +47,6 @@ module.exports.routes = {
   ***************************************************************************/
 
   'post /rfid':    'RfidController.store',
-  'get /rfid':     'RfidController.show'
+  'get /rfid':     'RfidController.show',
+  'delete /rfid':     'RfidController.reset'
 };
