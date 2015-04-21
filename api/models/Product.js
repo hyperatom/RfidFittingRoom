@@ -103,7 +103,7 @@ module.exports = {
       description: 'Endorsed by the UK College of Podiatrists, Insolia Flex® makes walking in flats more' +
       ' comfortable by insuring your foot is correctly...',
       price: 19.50,
-      imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/SD_01_T52_2809_F0_X_EC_0?$PDP_PROD_IMAGE$',
+      imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/HT_01_T02_0705_Y1_X_EC_0?$PDP_PROD_IMAGE$',
       relatedTo: '0268098208',
       rating: 4,
       inStore: true
@@ -135,7 +135,7 @@ module.exports = {
       description: 'Sun Smart clear formulations feature a skin caring complex of sunflower oil, soothing' +
       ' aloe and antioxidant Vitamin E to help maintain...',
       price: 15.00,
-      imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/RC_01_T01_3612S_E0_X_EC_0?$PDP_PROD_IMAGE$',
+      imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/RC_07_T22_4376_NC_X_EC_0?$PDP_PROD_IMAGE$',
       relatedTo: '1231094920',
       rating: 3,
       inStore: false
