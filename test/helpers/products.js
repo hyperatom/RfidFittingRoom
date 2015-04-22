@@ -7,9 +7,9 @@ module.exports = {
     price: 16.00,
     relatedProducts: [{
       id: '33333',
-      name: 'Bow Visor',
-      description: 'Keep the sun out of your eyes with this chic visor.',
-      price: 12.50,
+      name: 'Three Faux Feather Bow Hat',
+      description: 'Wearing this striking fascinator means you won\'t fail to go unnoticed.',
+      price: 89.00,
       relatedTo: '0268098208'
     },
     {
@@ -45,10 +45,10 @@ module.exports = {
     },
     {
       id: '77777',
-      name: 'Raffia Floppy Wide Brim Hat',
-      description: 'A stylish way to keep the sun off your face, this elegant sun hat is a summer must-have.',
-      price: 18.00,
-      imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/HT_01_T01_4603L_V4_X_EC_90?$PDP_MAXI_ZOOM$',
+      name: 'Diamanté Feather & Net Fascinator',
+      description: 'Wearing this striking fascinator means you won\'t fail to go unnoticed.',
+      price: 25.00,
+      imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/HT_01_T01_6173_FU_X_EC_90?$PDP_PROD_IMAGE$',
       relatedTo: '1231094920'
     },
     {
@@ -63,10 +63,10 @@ module.exports = {
   },
   product_3: {
     id: '33333',
-    name: 'Bow Visor',
-    description: 'Keep the sun out of your eyes with this chic visor.',
-    price: 12.50,
-    imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/HT_01_T01_7201_V4_X_EC_90?$PDP_MAXI_ZOOM$',
+    name: 'Three Faux Feather Bow Hat',
+    description: 'Wearing this striking fascinator means you won\'t fail to go unnoticed.',
+    price: 89.00,
+    imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/HT_01_T01_6859E_FU_SP14_EC_90?$PDP_PROD_IMAGE$',
     relatedTo: '0268098208'
   },
   product_4: {
@@ -97,10 +97,10 @@ module.exports = {
   },
   product_7: {
     id: '77777',
-    name: 'Raffia Floppy Wide Brim Hat',
-    description: 'A stylish way to keep the sun off your face, this elegant sun hat is a summer must-have.',
-    price: 18.00,
-    imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/HT_01_T01_4603L_V4_X_EC_90?$PDP_MAXI_ZOOM$',
+    name: 'Diamanté Feather & Net Fascinator',
+    description: 'Wearing this striking fascinator means you won\'t fail to go unnoticed.',
+    price: 25.00,
+    imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/HT_01_T01_6173_FU_X_EC_90?$PDP_PROD_IMAGE$',
     relatedTo: '1231094920'
   },
   product_8: {
