@@ -26,7 +26,9 @@ POST | /rfid | [Rfid](###Product) | [Product](###Product) |
     description: string,
     price: float,
     imageUrl: string,
-    image: string
+    image: string,
+    rating: 3,
+    inStore: true,
     relatedProducts: [Product]
 }
 ```
