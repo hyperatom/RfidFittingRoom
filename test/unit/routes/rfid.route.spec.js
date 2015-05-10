@@ -18,21 +18,6 @@ describe('RFID Route Availability', function() {
         .send({ id: '0268098208' })
         .expect(200, done);
     });
-
-    it('should store the RFID code', function(done) {
-
-      var spy = sinon.spy(RfidRepo, 'store');
-
-      req(sails.hooks.http.app)
-        .post('/rfid')
-        .send({ id: '0268098208' })
-        .expect(200)
-        .then(function() {
-          expect(spy.called).to.equal(true);
-          done();
-        });
-    });
-
   });
 
   describe('GET /rfid', function() {
@@ -44,14 +29,7 @@ describe('RFID Route Availability', function() {
         .expect('Content-Type', /json/)
         .expect(200)
         .end(function(err, res) {
-          expect(res.body).to.have.property('id');
-          expect(res.body).to.have.property('name');
-          expect(res.body).to.have.property('description');
-          expect(res.body).to.have.property('price');
-          expect(res.body).to.have.property('image');
-          expect(res.body).to.have.property('relatedProducts');
-          expect(res.body).to.have.property('rating');
-          expect(res.body).to.have.property('inStore');
+          productTester.assertProperties(res.body);
           done();
         });
     });
@@ -63,14 +41,7 @@ describe('RFID Route Availability', function() {
         .expect('Content-Type', /json/)
         .expect(200)
         .end(function(err, res) {
-          expect(res.body).to.have.property('id');
-          expect(res.body).to.have.property('name');
-          expect(res.body).to.have.property('description');
-          expect(res.body).to.have.property('price');
-          expect(res.body).to.have.property('image');
           expect(res.body).to.have.property('relatedProducts');
-          expect(res.body).to.have.property('rating');
-          expect(res.body).to.have.property('inStore');
           done();
         });
     });
@@ -116,7 +87,7 @@ describe('RFID-Product mappings', function() {
         .get('/rfid')
         .expect(200)
         .end(function(err, res) {
-          productTester.assert(res.body, testProducts.product_1);
+          productTester.assertEqual(res.body, testProducts.product_1);
           done();
         });
     }
@@ -132,17 +103,6 @@ describe('RFID-Product mappings', function() {
 
   it('should return the correct product for RFID code 1231094920', function(done) {
 
-    function getActiveProduct(done) {
-
-      return req(sails.hooks.http.app)
-        .get('/rfid')
-        .expect(200)
-        .end(function(err, res) {
-          productTester.assert(res.body, testProducts.product_2);
-          done();
-        });
-    }
-
     req(sails.hooks.http.app)
       .post('/rfid')
       .send({ id: '1231094920' })
@@ -150,5 +110,15 @@ describe('RFID-Product mappings', function() {
       .end(function() {
         getActiveProduct(done);
       });
+
+    function getActiveProduct(done) {
+      return req(sails.hooks.http.app)
+        .get('/rfid')
+        .expect(200)
+        .end(function(err, res) {
+          productTester.assertEqual(res.body, testProducts.product_2);
+          done();
+        });
+    }
   });
 });

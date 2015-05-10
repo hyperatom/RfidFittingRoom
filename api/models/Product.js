@@ -53,6 +53,11 @@ module.exports = {
 
     inStore: {
       type: 'boolean'
+    },
+
+    storeLocation: {
+      type: 'string',
+      required: false
     }
   },
 
@@ -65,7 +70,8 @@ module.exports = {
       price: 16.00,
       imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/SD_01_T52_2809_F0_X_EC_0?$PDP_PROD_IMAGE$',
       rating: 5,
-      inStore: true
+      inStore: true,
+      storeLocation: 'Women\'s Dresses Floor 2'
     },
     {
       id: '1231094920',
@@ -75,7 +81,8 @@ module.exports = {
       price: 39.50,
       imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/SD_01_T42_2410D_F4_X_EC_0?$PDP_PROD_IMAGE$',
       rating: 5,
-      inStore: true
+      inStore: true,
+      storeLocation: 'Women\'s Dresses Floor 2'
     },
     {
       id: '33333',
@@ -85,7 +92,8 @@ module.exports = {
       imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/HT_01_T01_6859E_FU_SP14_EC_90?$PDP_PROD_IMAGE$',
       relatedTo: '0268098208',
       rating: 4,
-      inStore: true
+      inStore: true,
+      storeLocation: 'Women\'s Accessories Floor 2'
     },
     {
       id: '44444',
@@ -95,7 +103,8 @@ module.exports = {
       imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/RC_01_T06_6902L_AN_X_EC_1?$PDP_PROD_IMAGE$',
       relatedTo: '0268098208',
       rating: 5,
-      inStore: true
+      inStore: true,
+      storeLocation: 'Women\'s Accessories Floor 2'
     },
     {
       id: '55555',
@@ -106,7 +115,8 @@ module.exports = {
       imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/HT_01_T02_0705_Y1_X_EC_0?$PDP_PROD_IMAGE$',
       relatedTo: '0268098208',
       rating: 4,
-      inStore: true
+      inStore: true,
+      storeLocation: 'Women\'s Shoes Floor 1'
     },
     {
       id: '66666',
@@ -117,7 +127,8 @@ module.exports = {
       imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/RC_01_T01_3612S_E0_X_EC_0?$PDP_PROD_IMAGE$',
       relatedTo: '1231094920',
       rating: 3,
-      inStore: true
+      inStore: true,
+      storeLocation: 'Women\'s Accessories Floor 2'
     },
     {
       id: '77777',
@@ -127,7 +138,8 @@ module.exports = {
       imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/HT_01_T01_6173_FU_X_EC_90?$PDP_PROD_IMAGE$',
       relatedTo: '1231094920',
       rating: 4,
-      inStore: true
+      inStore: true,
+      storeLocation: 'Women\'s Accessories Floor 2'
     },
     {
       id: '88888',
@@ -138,7 +150,8 @@ module.exports = {
       imageUrl: 'http://asset1.marksandspencer.com/is/image/mands/RC_07_T22_4376_NC_X_EC_0?$PDP_PROD_IMAGE$',
       relatedTo: '1231094920',
       rating: 3,
-      inStore: true
+      inStore: true,
+      storeLocation: 'Health & Beauty Floor 1'
     }
   ]
 };
